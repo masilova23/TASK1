@@ -11,6 +11,7 @@
   }
 
   $name = mysqli_real_escape_string($conn, $_POST['name']);
+  $surname = mysqli_real_escape_string($conn, $_POST['surname']);
   $number = mysqli_real_escape_string($conn, $_POST['number']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $date = mysqli_real_escape_string($conn, $_POST['date']);
@@ -61,13 +62,13 @@
         $error = "Похоже вы слишком малы для использования формы, убедитесь что вы все ввели верно<br>";
         break;
     default:
-      $query = "INSERT INTO users (name,number,email,date,gen,about) VALUES ('$name','$number','$email','$date', '$gen','$about')";
+      $query = "INSERT INTO users (person_name,person_surname,number,email,year,gen,about) VALUES ('$name', '$surname','$number','$email','$date', '$gen','$about')";
 
       mysqli_query($conn, $query);
 
      $user_id = mysqli_insert_id($conn);
 
-      $query = "INSERT INTO lengs (id,pascal,c,cpp,js,php,python,java,haskel,clijure,prolog,scara) VALUES ('$user_id','$e1', '$e2','$e3','$e4','$e5', '$e6','$e7','$e8','$e9','$e10','$e11')";
+      $query = "INSERT INTO leng (id,pascal,c,cpp,js,php,python,java,haskel,clijure,prolog,scara) VALUES ('$user_id','$e1', '$e2','$e3','$e4','$e5', '$e6','$e7','$e8','$e9','$e10','$e11')";
 
       if (mysqli_query($conn, $query)) {
         echo 'Данные успешно сохранены' . "<br>";
@@ -94,9 +95,9 @@
       <?php if ($error == ""): ?>
         <div class="tables">
           <?php
-          $query = "SELECT users.name, users.number, users.email, users.date, users.gen, users.about, lengs.pascal, lengs.c, lengs.cpp, lengs.js, lengs.php, lengs.python, lengs.java, lengs.haskel, lengs.clijure, lengs.prolog, lengs.scara
+          $query = "SELECT users.person_name, users.person_surname, users.number, users.email, users.year, users.gen, users.about, leng.pascal, leng.c, leng.cpp, leng.js, leng.php, leng.python, leng.java, leng.haskel, leng.clijure, leng.prolog, leng.scara
                   FROM users
-                  INNER JOIN lengs ON users.id = lengs.id";
+                  INNER JOIN leng ON users.id = leng.id";
 
           $result = mysqli_query($conn, $query);
           ?>
@@ -104,10 +105,11 @@
           <?php while ($row = mysqli_fetch_assoc($result)): ?>
               <div class="colom">
                   <?php
-                  echo "Имя: " . $row["name"] . "<br>";
+                  echo "Имя: " . $row["person_name"] . "<br>";
+                  echo "Фамилия: " . $row["person_surname"] . "<br>";
                   echo "Номер телефона: " . $row["number"] . "<br>";
                   echo "Электронная почта: " . $row["email"] . "<br>";
-                  echo "Год рождения: " . $row["date"] . "<br>";
+                  echo "Год рождения: " . $row["year"] . "<br>";
                   echo "Пол: " . $row["gen"] . "<br>";
                   echo "О себе: " . $row["about"] . "<br>";
                   ?>
