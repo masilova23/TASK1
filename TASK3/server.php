@@ -96,7 +96,7 @@
           <?php
           $query = "SELECT users.name, users.number, users.email, users.date, users.gen, users.about, lengs.pascal, lengs.c, lengs.cpp, lengs.js, lengs.php, lengs.python, lengs.java, lengs.haskel, lengs.clijure, lengs.prolog, lengs.scara
                   FROM users
-                  INNER JOIN leng ON users.id = leng.id";
+                  INNER JOIN lengs ON users.id = lengs.id";
 
           $result = mysqli_query($conn, $query);
           ?>
