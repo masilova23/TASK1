@@ -1,1 +1,60 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="skript.js" defer></script>
+</head>
+<body>
+    <h1>Форма записи в базу данных</h1>
+    <form action="server.php" method="POST">
+        <div class="body">
+            <div class="info">
+                <div class="input">
+                    <input name="name" id="name" type="text" placeholder="Имя" required>
+                    <input name="surname" id="surname" type="text" placeholder="Фамилия" required>
+                    <input name="number" id="number" type="number" placeholder="Номер" required>
+                    <input name="email" id="email" type="email" placeholder="Почта" required>
+                    <input name="date" id="date" type="date" placeholder="" required>
+                </div>
+                <div class="cheked">
+                    <div class="radio_pol">
+                        <label>
+                            <input name="gen" value="1" type="radio" required>Мужчина
+                        </label>
+                        <label>
+                            <input name="gen" value="2" type="radio" required>Женщина
+                        </label>
+                    </div>
+                    <div class="langvich_section">
+                        <h4>Выберите язык программирования</h4>
+                        <select multiple name="leng[]" class="langvich" name="langvich">
+                            <option value="Pascal">Pascal</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="Haskel">Haskel</option>
+                            <option value="Clojure">Clojure</option>
+                            <option value="Prolog">Prolog</option>
+                            <option value="Scara">Scara</option>
+                        </select>
+                    </div>
+                    <div class="textarea">
+                        <h4>Напишите о себе</h4>
+                        <textarea name="about" cols="30" rows="8" required></textarea>
+                    </div>
+                    <label>
+                        <input class="custom-checkbox" type="checkbox" name="document" id="" required>Я согласен(а) c условиями <pre> </pre> <a href="#"> коденфиденциальности</a>
+                    </label>
+                </div>
+            </div>
+            <button class="button" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
