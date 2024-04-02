@@ -62,13 +62,13 @@
         $error = "Похоже вы слишком малы для использования формы, убедитесь что вы все ввели верно<br>";
         break;
     default:
-      $query = "INSERT INTO users (person_name,person_surname,number,email,year,gen,about) VALUES ('$name', '$surname','$number','$email','$date', '$gen','$about')";
+      $query = "INSERT INTO users (name,number,email,date,gen,about) VALUES ('$name','$number','$email','$date', '$gen','$about')";
 
-      //mysqli_query($conn, $query);
+      mysqli_query($conn, $query);
 
-    // $user_id = mysqli_insert_id($conn);
+     $user_id = mysqli_insert_id($conn);
 
-      $query = "INSERT INTO leng (id,pascal,c,cpp,js,php,python,java,haskel,clijure,prolog,scara) VALUES ('LAST_INSERT_ID()','$e1', '$e2','$e3','$e4','$e5', '$e6','$e7','$e8','$e9','$e10','$e11')";
+      $query = "INSERT INTO leng (id,pascal,c,cpp,js,php,python,java,haskel,clijure,prolog,scara) VALUES ('$user_id','$e1', '$e2','$e3','$e4','$e5', '$e6','$e7','$e8','$e9','$e10','$e11')";
 
       if (mysqli_query($conn, $query)) {
         echo 'Данные успешно сохранены' . "<br>";
