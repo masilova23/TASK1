@@ -11,7 +11,6 @@
   }
 
   $name = mysqli_real_escape_string($conn, $_POST['name']);
-  $surname = mysqli_real_escape_string($conn, $_POST['surname']);
   $number = mysqli_real_escape_string($conn, $_POST['number']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $date = mysqli_real_escape_string($conn, $_POST['date']);
