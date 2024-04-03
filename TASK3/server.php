@@ -105,7 +105,7 @@
           <?php while ($row = mysqli_fetch_assoc($result)): ?>
               <div class="colom">
                   <?php
-                  echo "Имя: " . $row["person_name"] . "<br>";
+                  <p>echo "Имя: " . $row["person_name"] . "<br>";
                   echo "Фамилия: " . $row["person_surname"] . "<br>";
                   echo "Номер телефона: " . $row["number"] . "<br>";
                   echo "Электронная почта: " . $row["email"] . "<br>";
@@ -127,7 +127,7 @@
                     if($row["clijure"] == "1"){echo "clijure, ";}
                     if($row["prolog"] == "1"){echo "prolog, ";}
                     if($row["scara"] == "1"){echo "scara ," ;}
-                    ?>
+                    ?></p>
                   </div>
               </div>
           <?php endwhile; ?>
