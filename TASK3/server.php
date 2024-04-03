@@ -22,7 +22,7 @@
   $arr_len = ["Pascal","C","C++","JavaScript","PHP","Python","Java","Haskel","Clijure","Prolog","Scara"];
   $arr_num_len = [0,0,0,0,0,0,0,0,0,0,0];
 
-  foreach($lengs as $leng){
+  foreach($lengs as $lengs){
     $index = array_search($leng, $arr_len);
     if ($index !== false) {
       $arr_num_len[$index] = 1;
