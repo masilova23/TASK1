@@ -18,7 +18,7 @@
   $gen = mysqli_real_escape_string($conn, $_POST['gen']);
   $about = mysqli_real_escape_string($conn, $_POST['about']);
 
-  $lengs = $_POST[filter.input('leng')];
+  $lengs = $_POST[filter_input('leng')];
   $arr_len = ["Pascal","C","C++","JavaScript","PHP","Python","Java","Haskel","Clijure","Prolog","Scara"];
   $arr_num_len = [0,0,0,0,0,0,0,0,0,0,0];
 
