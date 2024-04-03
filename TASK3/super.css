@@ -5,7 +5,7 @@
   }
   
   body{
-    background-color: #d27a7a;
+    background-color: #D6C0CE;
   }
   
   .text{
@@ -23,7 +23,7 @@
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    background-color:#e4bbbb;
+    background-color:#EEC3D6;
     margin-bottom: 10px;
     margin-top: 10px;
     padding:10px;
@@ -34,43 +34,6 @@
     display: flex;
     flex-direction: column;
   }
-  .table{
-    font-family: 'Courier New', Courier, monospace;
-    background-color:#e4bbbb;
-    max-width: 960px;
-    margin: 0 auto;
-    padding:10px;
-    margin-top:20px;
-    padding-top:20px;
-    padding-bottom:20px;
-    width: 960;
-    border-radius: 10px;
-    border-collapse: collapse;
-    border-collapse: separate;
-    border-spacing: 10px 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .table table{
-  padding-left: 170px;
-  padding-right: 170px;
-  }
-  
-  th {
-    font-weight: normal;
-    color: #000000;
-    padding: 10px 15px;
-  }
-  td {
-    color: #000000;
-    border-top: 1px solid #613636;
-    padding: 10px 15px;
-  }
-  tr:nth-child(2n) {
-    background: #d27a7a;
-  }
-  
   form{
     display: flex;
     flex-direction: column;
@@ -81,7 +44,7 @@
     margin:20px;
     padding:10px;
     max-width: 960px;
-    background-color:#e4bbbb;
+    background-color:#EEC3D6;
     margin: 0 auto;
     margin-top:20px;
     padding:10px;
@@ -89,21 +52,21 @@
   
   form input{
     padding: 12px 20px;
-    background-color:#d27a7a;
+    background-color:#DFB7AD;
   
   }
   
   form textarea{
-    background-color:#d27a7a;
+    background-color:#DFB7AD;
   }
   
   form option{
-    background-color:#d27a7a;
+    background-color:#DFB7AD;
   }
   
   form input:focus {
-    background-color: #613636;
-    color: #ffffff;
+    background-color: ##DFB7AD;
+    color: #DFB7AD;
   }
       order: -1;
       margin-bottom: 10px;
