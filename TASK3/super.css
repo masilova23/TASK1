@@ -5,7 +5,7 @@
   }
   
   body{
-    background-color: #D6C0CE;
+    background-color: #75706B;
   }
   
   .text{
@@ -23,7 +23,7 @@
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    background-color:#EEC3D6;
+    background-color:#A38F84;
     margin-bottom: 10px;
     margin-top: 10px;
     padding:10px;
@@ -44,7 +44,7 @@
     margin:20px;
     padding:10px;
     max-width: 960px;
-    background-color:#EEC3D6;
+    background-color:#A38F84;
     margin: 0 auto;
     margin-top:20px;
     padding:10px;
@@ -52,21 +52,21 @@
   
   form input{
     padding: 12px 20px;
-    background-color:#DFB7AD;
+    background-color:#E0D5B2;
   
   }
   
   form textarea{
-    background-color:#DFB7AD;
+    background-color:#E0D5B2;
   }
   
   form option{
-    background-color:#DFB7AD;
+    background-color:#E0D5B2;
   }
   
   form input:focus {
-    background-color: ##DFB7AD;
-    color: #DFB7AD;
+    background-color: #E0D5B2;
+    color: #E0D5B2;
   }
       order: -1;
       margin-bottom: 10px;
