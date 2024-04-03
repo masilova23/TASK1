@@ -132,7 +132,7 @@
               </div>
           <?php endwhile; ?>
         </div>
-        <a class="btn" href="javascript:history.back()"><input type="button" value="Вернутся"></input></a>
+        <a class="btn" href="javascript:history.back()"><input type="button" value="Вернуться"></input></a>
       <?php endif; ?>
 </body>
 </html>
