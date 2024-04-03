@@ -44,22 +44,22 @@
   $error = "";
   switch (true) {
     case !(preg_match('/^[\p{Cyrillic}\s]*$/u', $name)):
-        $error = "Имя содержит неправильные символы, убедитесь что вы все ввели верно<br>";
+        $error = "Неправильные символы в имени<br>";
         break;
-    case !(strlen($name) < 100):
-        $error = "Имя содержит слишком много символов, убедитесь что вы все ввели верно<br>";
+    case !(strlen($name) < 11):
+        $error = "Я не верю что у вас такое длинное имя<br>";
         break;
     case !(preg_match('/^[\p{Cyrillic}\s]*$/u', $surname)):
-        $error = "Фамилия содержит неправильные символы, убедитесь что вы все ввели верно<br>";
+        $error = "Неправильные символы в фамилии<br>";
         break;
-    case !(strlen($surname) < 100):
-        $error = "Фамилия содержит слишком много символов, убедитесь что вы все ввели верно<br>";
+    case !(strlen($surname) < 21):
+        $error = "Слишком длинная фамилия<br>";
         break;
     case !(strlen($number) == 11):
-        $error = "Номер введен не верно, убедитесь что вы все ввели верно<br>";
+        $error = "Номер введен неверно<br>";
         break;
-    case (intval(substr($date, 0, 4)) > 2016):
-        $error = "Похоже вы слишком малы для использования формы, убедитесь что вы все ввели верно<br>";
+    case (intval(substr($date, 0, 4)) > 2006):
+        $error = "Вам нет 18 лет<br>";
         break;
     default:
       $query = "INSERT INTO users (person_name,person_surname,number,email,year,gen,about) VALUES ('$name', '$surname','$number','$email','$date', '$gen','$about')";
@@ -71,7 +71,7 @@
       $query = "INSERT INTO leng (id,pascal,c,cpp,js,php,python,java,haskel,clijure,prolog,scara) VALUES ('$user_id','$e1', '$e2','$e3','$e4','$e5', '$e6','$e7','$e8','$e9','$e10','$e11')";
 
       if (mysqli_query($conn, $query)) {
-        echo 'Данные успешно сохранены' . "<br>";
+        echo 'Данные сохранены' . "<br>";
       } else {
         echo 'Ошибка сохранения данных: ' . mysqli_error($conn);
       }
