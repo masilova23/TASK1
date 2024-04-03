@@ -19,7 +19,7 @@
     justify-content: center;
     flex-direction: row;
     border-radius: 10px;
-    font-family: Georgia, sans-serif;
+    font-family: Comic Sans MS;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Comic Sans MS;
     height: 100%;
     margin:20px;
     padding:10px;
