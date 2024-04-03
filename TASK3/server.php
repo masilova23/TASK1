@@ -136,5 +136,5 @@
       <?php endif; ?>
 </body>
 </html>
-
+error_reporting(E_ALL ^ E_WARNING);
 <?php mysqli_close($conn);?>
