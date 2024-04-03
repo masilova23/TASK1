@@ -53,11 +53,13 @@
   form input{
     padding: 12px 20px;
     background-color:#E0D5B2;
+    color: #75706B;
   
   }
   
   form textarea{
     background-color:#E0D5B2;
+    color: #75706B;
   }
   
   form option{
