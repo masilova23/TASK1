@@ -6,16 +6,19 @@
     <title>Форма</title>
     <link href="super.css" rel="stylesheet" type="text/css">
     <script src="skript.js" defer></script>
+    p{line-height 1.2}
 </head>
 <body>
     <form action="server.php" method="POST">
         <div class="body">
             <div class="info">
                 <div class="input">
+                    <p>
                     <input name="name" id="name" type="text" placeholder="Имя" required>
-                    <br>
+                    </p>
+                    <p>
                     <input name="surname" id="surname" type="text" placeholder="Фамилия" required>
-                    <br>
+                    </p>
                     <input name="number" id="number" type="number" placeholder="Номер" required>
                     <br>
                     <input name="email" id="email" type="email" placeholder="Почта" required>
