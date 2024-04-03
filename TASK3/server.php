@@ -5,7 +5,7 @@
   $database = 'u67457';
 
   $conn = mysqli_connect($host, $user, $password, $database);
-error_reporting(E_ALL ^ E_WARNING);
+  error_reporting(E_ALL ^ E_WARNING);
   if (!$conn) {
     die('Ошибка подключения к базе данных: ' . mysqli_connect_error());
   }
